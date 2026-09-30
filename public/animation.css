@@ -1,0 +1,47 @@
+@keyframes gradientBackground{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes entrarDireita{
+    from {
+        right: -300px;
+        opacity: 0;
+    }
+
+    to{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes entrarEsquerda{
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

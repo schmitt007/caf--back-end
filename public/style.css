@@ -1,0 +1,387 @@
+@import url("./color.css");
+@import url("./animation.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--off-white);
+    color: #333333;
+    overflow-x: hidden;
+}
+
+
+header {
+    background: var(--marrom-escuro);
+    color: var(--branco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd699;
+}
+
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 60px;
+
+    background: linear-gradient(
+        120deg,
+        var(--bege-claro),
+        var(--marrom-medio)
+    );
+
+    background-size: 400% 400%;
+    animation: gradientBackground 10s linear infinite;
+
+    overflow: hidden;
+}
+
+.texto-banner {
+    width: 45%;
+    color: #2f3440;
+
+    position: relative;
+
+    animation: entrarEsquerda 2s ease-out forwards;
+}
+
+.texto-banner h1 {
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.texto-banner p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.banner img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    animation: entrarDireita 2s ease-out forwards;
+}
+
+
+button {
+    background: #8b5b3c;
+
+    height: 40px;
+    width: 200px;
+
+    color: var(--branco);
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+.titulo {
+    text-align: center;
+
+    margin: 50px 0;
+
+    font-size: 34px;
+
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 280px;
+
+    background: white;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+}
+
+.card p {
+    padding: 0 20px;
+
+    margin-bottom: 20px;
+
+    line-height: 24px;
+}
+
+
+footer {
+    background: var(--marrom-escuro);
+    color: var(--branco);
+
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 14px;
+    font-weight: 100;
+
+    padding: 5px;
+}
+
+footer h2 {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.descricao-produtos {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 430px) {
+
+
+    header {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        padding: 15px;
+
+        gap: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    .banner {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 40px 20px;
+
+        gap: 30px;
+
+        overflow: hidden;
+    }
+
+    .texto-banner {
+        width: 100%;
+
+        order: 1;
+
+        position: relative;
+
+        animation: entrarEsquerda 2s ease-out forwards;
+    }
+
+    .texto-banner h1 {
+        font-size: 42px;
+
+        line-height: 48px;
+
+        margin-bottom: 15px;
+    }
+
+    .texto-banner p {
+        font-size: 17px;
+
+        line-height: 27px;
+
+        margin-bottom: 25px;
+    }
+
+    button {
+        width: 220px;
+        height: 50px;
+    }
+
+    .banner img {
+        order: 2;
+
+        width: 75%;
+        max-width: 240px;
+
+        height: auto;
+
+        display: block;
+
+        margin: 0 auto;
+
+        position: relative;
+
+        animation: entrarDireita 2s ease-out forwards;
+    }
+
+
+    .titulo {
+        font-size: 30px;
+
+        margin: 40px 20px;
+    }
+
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin-bottom: 40px;
+    }
+
+    .card {
+        width: 90%;
+
+        max-width: 320px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+
+    footer {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .texto-banner h1 {
+        font-size: 36px;
+
+        line-height: 42px;
+    }
+
+    .texto-banner p {
+        font-size: 16px;
+
+        line-height: 25px;
+    }
+
+    .banner {
+        padding: 30px 15px;
+    }
+
+    .banner img {
+        width: 70%;
+        max-width: 210px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
