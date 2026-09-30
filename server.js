@@ -15,16 +15,14 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(
-    path.join(__dirname, 'CAFE AROMA', 'public')
-));
+// Arquivos da pasta public
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/img', express.static(
-    path.join(__dirname, 'CAFE AROMA', 'img')
-));
+// Imagens
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
+// Rotas
 app.use('/api/cardapio', cardapioRouter);
-
 app.use('/api/produtos', produtosRouter);
 
 app.listen(port, () => {
